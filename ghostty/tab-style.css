@@ -1,0 +1,21 @@
+/*
+debug: env GTK_DEBUG=interactive ghostty
+https://docs.gtk.org/gtk4/css-overview.html
+https://docs.gtk.org/gtk4/css-properties.html
+*/
+
+tabbar tabbox {
+  margin: 0;
+  padding: 4 0px;
+  min-height: 10px;
+}
+
+tabbar tabbox tab {
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+tabbar tabbox tab label {
+  font-size: 13px;
+}

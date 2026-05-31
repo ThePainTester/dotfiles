@@ -1,0 +1,51 @@
+# Looks
+theme = Catppuccin Mocha
+font-family = JetBrainsMono Nerd Font
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+background-opacity = 0.95
+background-blur-radius = 20
+mouse-hide-while-typing = true
+confirm-close-surface = false
+copy-on-select = clipboard
+window-theme = ghostty
+
+# Shell integration
+shell-integration-features = ssh-env
+
+# Tab bar
+gtk-custom-css = tab-style.css
+gtk-wide-tabs = false
+
+# Keybinds
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
+keybind = ctrl+a>h=new_split:left
+keybind = ctrl+a>j=new_split:down
+keybind = ctrl+a>k=new_split:up
+keybind = ctrl+a>l=new_split:right
+keybind = ctrl+a>x=close_surface
+keybind = ctrl+a>z=toggle_split_zoom
+keybind = ctrl+alt+h=resize_split:left,20
+keybind = ctrl+alt+j=resize_split:down,20
+keybind = ctrl+alt+k=resize_split:up,20
+keybind = ctrl+alt+l=resize_split:right,20
+keybind = ctrl+shift+equal=equalize_splits
+
+keybind = ctrl+a>c=new_tab
+keybind = ctrl+a>7=close_tab
+keybind = ctrl+a>n=next_tab
+keybind = ctrl+a>p=previous_tab
+
+keybind = ctrl+a>r=reload_config
+keybind = ctrl+;=clear_screen
+
+# Shaders
+# custom-shader = shaders/cursor_blaze.glsl
+# custom-shader = shaders/blaze_sparks.glsl
+# custom-shader = shaders/cursor_frozen.glsl
+custom-shader = shaders/cursor_smear.glsl

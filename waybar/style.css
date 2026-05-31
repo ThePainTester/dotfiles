@@ -1,0 +1,165 @@
+@import "mocha.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", "Noto Sans Arabic", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;  /* @base at 60% opacity */
+    color: @text;
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#custom-power,
+#language,
+#custom-archicon,
+#power-profiles-daemon {
+    background-color: @crust;
+    color: @text;
+    font-weight: bold;
+    padding: 4px 14px;
+    margin: 4px 2px;
+    border-radius: 20px;
+}
+
+/* workspaces */
+#workspaces {
+    padding: 2px 4px;
+}
+
+#workspaces button {
+    background: @base;
+    color: transparent;
+    padding: 0 5px;
+    margin: 4 2px;
+    border-radius: 99px;
+    transition: padding 100ms linear;
+}
+
+#workspaces button:hover {
+    background-color: @surface1;
+}
+
+#workspaces button.active {
+    background-color: @blue;
+    padding: 0 16px;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+/* Clock */
+#clock {
+    color: @blue;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    color: @yellow;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+/* Network */
+#network.wifi,
+#network.ethernet {
+    color: @mauve;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* Bluetooth */
+#bluetooth {
+    color: @blue;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @overlay0;
+}
+
+/* Battery */
+#battery {
+    color: @green;
+}
+
+#battery.warning {
+    color: @peach;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.charging {
+    color: @yellow;
+}
+
+@keyframes blink {
+    to {
+        background-color: @red;
+        color: @base;
+    }
+}
+
+#battery.critical:not(.charging) {
+    animation: blink 1s linear infinite alternate;
+}
+
+#language {
+    color: @yellow;
+}
+
+#power-profiles-daemon {
+    min-width: 14px;
+}
+
+#power-profiles-daemon.balanced {
+    color: @rosewater;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @blue;
+}
+
+#custom-power {
+    color: @rosewater;
+    padding-right: 16px;
+}
+
+#custom-archicon {
+    font-size: 18px;
+    color: @mauve;
+    padding-left: 9px;
+    min-width: 20px;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: @mantle;
+    border: 1px solid @surface1;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 4px 8px;
+}

@@ -1,0 +1,94 @@
+{
+    "layer": "top",
+    "spacing": 10,
+    "fixed-center": true,
+    "modules-right": ["power-profiles-daemon", "pulseaudio", "hyprland/language", "battery", "custom/power"],
+    "modules-center": ["clock", "hyprland/workspaces"],
+    "modules-left": ["custom/archicon", "network#wifi", "network#eth", "bluetooth"],
+    "clock": {
+	"interval": 60,
+	"format": "{:%I:%M %p}",
+	"max-length": 25,
+	"tooltip-format": "{:%d-%m-%Y}",
+    },
+    "hyprland/workspaces": {
+	"format": "",
+    "persistent-workspaces": {
+         "eDP-1": [1, 2, 3, 4, 5],
+	     "HDMI-A-1": [6, 7, 8]
+       }
+    },
+    "pulseaudio": {
+	    "format": "{icon}  {volume}%",
+	    "format-bluetooth": "{icon} {volume}%",
+	    "format-muted": "",
+	    "format-icons": {
+		"headphone": "",
+		"headset": "󰋎",
+		"phone": "",
+		"phone-muted": "",
+		"portable": "",
+		"car": "",
+		"default": ["", ""]
+	    },
+	    "scroll-step": 1,
+	    "on-click": "pavucontrol",
+	    "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "network#wifi": {
+	    "interface": "wlp0s20f3",
+	    "format-wifi": "{icon}  {essid}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	    "format-disconnected": "", //An empty format will hide the module.
+	    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+	    "tooltip-format-disconnected": "Disconnected",
+	    "max-length": 50
+    },
+    "network#eth": {
+	    "interface": "enp52s0",
+	    "format-ethernet": "󰈁 {ipaddr}/{cidr}",
+	    "format-disconnected": "", //An empty format will hide the module.
+	    "tooltip-format-ethernet": "{ifname} ",
+	    "tooltip-format-disconnected": "Disconnected",
+	    "max-length": 50
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": {
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "keyboard-name": "ite-tech.-inc.-ite-device(8910)-keyboard",
+        "format-en": "EN",
+        "format-ar": "󱌨",
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}  {profile}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+          "balanced": "",
+        "performance": "",
+        "power-saver": ""
+      }
+    },
+    "custom/power": {
+	    "format" : "⏻",
+	    "tooltip": false,
+	    "on-click": "wlogout"
+    },
+    "custom/archicon": {
+        "format": "",
+        "tooltip": false,
+    },
+}
