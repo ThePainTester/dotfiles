@@ -3,12 +3,14 @@
 ---------------------
 
 -- Set programs that you use
-local terminal    = "ghostty"
-local fileManager = "thunar"
-local browser = "firefox"
-local menu        = "hyprlauncher"
-local obsidian = "obsidian"
-local keepass = "keepassxc"
+-- Path pinned to avoid $PATH overwrite attacks
+local path = "/usr/sbin/"
+local terminal    = path .. "ghostty"
+local fileManager = path .. "thunar"
+local browser = path .. "firefox"
+local menu        = path .. "hyprlauncher"
+local obsidian = path .. "obsidian"
+local keepass = path .. "keepassxc"
 
 ---------------------
 ---- KEYBINDINGS ----
