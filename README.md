@@ -1,6 +1,6 @@
 # ⚙️ Dotfiles
 
-This is my dotfiles for my arch linux system with hyprland.
+This are my dotfiles for my arch linux system with hyprland.
 
 ## Steps
 
