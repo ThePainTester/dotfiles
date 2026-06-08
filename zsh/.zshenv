@@ -29,3 +29,6 @@ export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
 # ---------- PATH ----------
 # Personal binaries/scripts
 export PATH="$HOME/.local/bin:$PATH"
+
+# ---------- libvirt ----------
+export LIBVIRT_DEFAULT_URI="qemu:///system"
