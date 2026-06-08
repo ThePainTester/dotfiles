@@ -10,7 +10,7 @@ git clone https://github.com/ThePainTester/dotfiles.git ~/
 ```
 2. Add a global `zshenv`
 ```bash
-sudo cat > /etc/zsh/zshenv <<EOF
+sudo tee /etc/zsh/zshenv >/dev/null <<'EOF'
 if [[ -z "$XDG_CONFIG_HOME" ]]
 then
         export XDG_CONFIG_HOME="$HOME/.config"
