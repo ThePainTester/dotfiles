@@ -6,7 +6,7 @@ This is my dotfiles for my arch linux system with hyprland.
 
 1. Clone the repo
 ```bash
-git clone https://github.com/ThePainTester/dotfiles.git ~/
+git clone https://github.com/ThePainTester/dotfiles.git ~/dotfiles
 ```
 2. Add a global `zshenv`
 ```bash
