@@ -11,18 +11,15 @@ confirm-close-surface = false
 copy-on-select = clipboard
 window-theme = ghostty
 
-# Shell integration
-shell-integration-features = ssh-env
-
 # Tab bar
 gtk-custom-css = tab-style.css
 gtk-wide-tabs = false
 
 # Keybinds
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:bottom
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+l=goto_split:right
+keybind = performable:ctrl+h=goto_split:left
+keybind = performable:ctrl+j=goto_split:bottom
+keybind = performable:ctrl+k=goto_split:top
+keybind = performable:ctrl+l=goto_split:right
 
 keybind = ctrl+a>h=new_split:left
 keybind = ctrl+a>j=new_split:down
@@ -37,12 +34,15 @@ keybind = ctrl+alt+l=resize_split:right,20
 keybind = ctrl+shift+equal=equalize_splits
 
 keybind = ctrl+a>c=new_tab
-keybind = ctrl+a>7=close_tab
+keybind = ctrl+a>u=close_tab
 keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
 
-keybind = ctrl+a>r=reload_config
 keybind = ctrl+;=clear_screen
+keybind = ctrl+a>ctrl+c=ignore
+
+keybind = alt+t=prompt_tab_title
+keybind = ctrl+a>bracket_left=write_scrollback_file:copy
 
 # Shaders
 # custom-shader = shaders/cursor_blaze.glsl

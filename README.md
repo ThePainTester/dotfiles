@@ -22,7 +22,11 @@ then
 fi
 EOF
 ```
-3. Symlink the dotfiles with GNU stow
+3. Optionally install tools with `setup.sh`
 ```bash
-stow ~/dotfiles
+bash ~/dotfiles/setup.sh
+```
+4. Symlink the dotfiles with GNU stow
+```bash
+cd ~/dotfiles && stow .
 ```
