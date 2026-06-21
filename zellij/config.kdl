@@ -3,9 +3,10 @@ theme "catppuccin-mocha"
 copy_on_select true
 mouse_mode true
 scroll_buffer_size 50000
-pane_frames true
+pane_frames false
 session_name "main"
 attach_to_session true
+show_startup_tips false
 
 keybinds {
     // ---- Normal mode: pane focus movement (replaces vim-tmux-navigator, non-nvim-aware version) ----
