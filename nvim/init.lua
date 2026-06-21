@@ -6,5 +6,6 @@ require("commands")
 require("pack")
 require("treesitter")
 require("lsp")
+require("clipboard")
 
 vim.cmd.colorscheme("catppuccin-mocha")
