@@ -3,3 +3,6 @@ zsh/plugins/
 
 # Assets
 hypr/wallpapers/
+
+# neovim
+nvim/lua/parsers.lua

@@ -1,16 +1,21 @@
 local treesitter  = require("nvim-treesitter")
 
-local ensure_installed = {
-    -- languages
-    "go", "rust", "typescript", "javascript", "tsx",
-    "html", "css", "json", "bash", "python", "ruby",
-    "java", "c_sharp", "php", "powershell", "sql",
-    "yaml", "xml", "c", "cpp", "cmake",
+local base_parsers = {
+    -- langauges
+    "bash", "python", "html", "javascript",
+    "css", "yaml", "xml", "json", "toml",
     -- extras
-    "http", "dockerfile",
+    "http", "dockerfile", "markdown", "markdown_inline",
+    "gitcommit", "gitignore", "diff", "git_rebase", "comment",
+    "regex",
 }
+treesitter.install(base_parsers)
 
-treesitter.install(ensure_installed)
+package.loaded["parsers"] = nil
+local ok, optional_parsers = pcall(require, "parsers")
+if ok then
+    treesitter.install(optional_parsers)
+end
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "*",
