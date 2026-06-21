@@ -1,0 +1,38 @@
+theme "catppuccin-mocha"
+
+copy_on_select true
+mouse_mode true
+scroll_buffer_size 50000
+pane_frames true
+session_name "main"
+attach_to_session true
+
+keybinds {
+    // ---- Normal mode: pane focus movement (replaces vim-tmux-navigator, non-nvim-aware version) ----
+    normal {
+        bind "Ctrl h" { MoveFocusOrTab "Left"; }
+        bind "Ctrl j" { MoveFocus "Down"; }
+        bind "Ctrl k" { MoveFocus "Up"; }
+        bind "Ctrl l" { MoveFocusOrTab "Right"; }
+    }
+
+    // ---- Pane mode (Ctrl+p): splits matching your tmux directions ----
+    pane {
+        bind "h" { NewPane "Left"; MovePane "Left";  SwitchToMode "Normal"; }
+        bind "j" { NewPane "Down";  SwitchToMode "Normal"; }
+        bind "k" { NewPane "Up"; MovePane "Up";  SwitchToMode "Normal"; }
+        bind "l" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+    }
+
+    // ---- Resize mode (Ctrl+n): your J/K/L/H resize, stays active until Esc ----
+    resize {
+        bind "H" "h" { Resize "Increase Left"; }
+        bind "J" "j" { Resize "Increase Down"; }
+        bind "K" "k" { Resize "Increase Up"; }
+        bind "L" "l" { Resize "Increase Right"; }
+        bind "=" "+" { Resize "Increase"; }
+        bind "-" "_" { Resize "Decrease"; }
+    }
+}
