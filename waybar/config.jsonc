@@ -40,6 +40,7 @@
 	    "format-wifi": "{icon}  {essid}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 	    "format-disconnected": "", //An empty format will hide the module.
+        "format-disabled": "",
 	    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
 	    "tooltip-format-disconnected": "Disconnected",
 	    "max-length": 50
