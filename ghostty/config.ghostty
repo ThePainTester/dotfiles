@@ -40,6 +40,8 @@ keybind = ctrl+a>c=new_tab
 keybind = ctrl+a>u=close_tab
 keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
+keybind = ctrl+alt+f=toggle_fullscreen
+keybind = ctrl+enter=unbind
 
 keybind = ctrl+;=clear_screen
 keybind = ctrl+a>ctrl+c=ignore
